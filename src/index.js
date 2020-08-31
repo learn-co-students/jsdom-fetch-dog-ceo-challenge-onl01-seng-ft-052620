@@ -34,7 +34,7 @@ function displayBreed(breed) {
         ul.appendChild(li)
     }
 }
-
+// doesnt work yet.
 function dropDown() {
     const breedOption = document.getElementById("breed-dropdown")
     breedOption.addEventListener('change', function(e){
