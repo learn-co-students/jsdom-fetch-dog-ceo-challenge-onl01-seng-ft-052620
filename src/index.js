@@ -34,11 +34,25 @@ function renderBreeds(breeds) {
         main.appendChild(li)
     }
 }
+
+function addRest(){
+    // Start from 'd'
+    let alphabet = 'efghijklmnopqrstuvwxyz'.split('');
+    let dropdown = document.getElementById('breed-dropdown')
+
+    alphabet.forEach(c =>{
+        let option = document.createElement('option')
+        option.value = c;
+        option.innerHTML = c;
+        dropdown.appendChild(option);
+    })
+}
     
 
 document.addEventListener('DOMContentLoaded', function(){
     fetchDogs()
     fetchBreeds()
+    addRest()
 })
 
 document.addEventListener('click', function(e){
@@ -68,5 +82,7 @@ document.addEventListener('change', function(){
         }
     }
 })
+
+
 
 
